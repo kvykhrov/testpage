@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>
+<meta charset="utf8">
+
+
+
+
+
+
+
+
+
+<!-- fayl curriculum dlia Intellias -->
+
+<style>
+.parent2 {
+background: #CCCCCC;
+height: 100px;
+width: 100%;
+position: relative;
+}
+.child2 {
+background: #FFFFFF;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+</style>
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body> 
+
+
+
+
+
+
+
+<div class="parent2">
+<div class="child2"><h1>Curriculum Vitae</h1></div> 
+</div>
+
+<div class="parent2">
+<div class="child2">Дані про себе Вихров Кирило Сергйович</div> 
+</div>
+
+<div class="parent2">
+<div class="child2">Досвід роботи</div> 
+</div>
+
+<div class="parent2">
+<div class="child2">Curriculum Vitae</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+setCookie("user_email","bobthegreat@gmail.com",30); //set "user_email" cookie, expires in 30 days
+var userEmail=getCookie("user_email");//"bobthegreat@gmail.com"
+
+
+console.log(userEmail);
+</script>
+
+
+</body> 
+</html>
